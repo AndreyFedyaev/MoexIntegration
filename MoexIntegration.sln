@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35806.99 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoexIntegration.API", "MoexIntegration.API\MoexIntegration.API.csproj", "{3AC4D54E-4032-417F-8E28-B1821A9BCEE3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3E3D5F62-C248-4A2A-9B20-9BDB3B7C2CB2} = {3E3D5F62-C248-4A2A-9B20-9BDB3B7C2CB2}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoexIntegration.Core", "MoexIntegration.Core\MoexIntegration.Core.csproj", "{3E3D5F62-C248-4A2A-9B20-9BDB3B7C2CB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoexIntegration.Infrastructure", "MoexIntegration.Infrastructure\MoexIntegration.Infrastructure.csproj", "{38755BA4-8D19-44AB-94E4-139106905512}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3AC4D54E-4032-417F-8E28-B1821A9BCEE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AC4D54E-4032-417F-8E28-B1821A9BCEE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AC4D54E-4032-417F-8E28-B1821A9BCEE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AC4D54E-4032-417F-8E28-B1821A9BCEE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E3D5F62-C248-4A2A-9B20-9BDB3B7C2CB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E3D5F62-C248-4A2A-9B20-9BDB3B7C2CB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E3D5F62-C248-4A2A-9B20-9BDB3B7C2CB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E3D5F62-C248-4A2A-9B20-9BDB3B7C2CB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38755BA4-8D19-44AB-94E4-139106905512}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38755BA4-8D19-44AB-94E4-139106905512}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38755BA4-8D19-44AB-94E4-139106905512}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38755BA4-8D19-44AB-94E4-139106905512}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2716D3C5-17C9-43D8-83ED-4D751644BD62}
+	EndGlobalSection
+EndGlobal

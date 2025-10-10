@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "M27C2BBwLZ6mx3Lm45HOk1XH9BDX1OJlXsXCoyD3g3A=",
+  "Source": "MoexIntegration.API",
+  "BasePath": "_content/MoexIntegration.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

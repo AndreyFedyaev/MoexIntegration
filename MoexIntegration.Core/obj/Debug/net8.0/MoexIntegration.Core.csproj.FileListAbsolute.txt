@@ -1,0 +1,12 @@
+C:\Users\Fedyaev\Documents\MyGitHub\MoexIntegration\MoexIntegration.Core\bin\Debug\net8.0\MoexIntegration.Core.deps.json
+C:\Users\Fedyaev\Documents\MyGitHub\MoexIntegration\MoexIntegration.Core\bin\Debug\net8.0\MoexIntegration.Core.dll
+C:\Users\Fedyaev\Documents\MyGitHub\MoexIntegration\MoexIntegration.Core\bin\Debug\net8.0\MoexIntegration.Core.pdb
+C:\Users\Fedyaev\Documents\MyGitHub\MoexIntegration\MoexIntegration.Core\obj\Debug\net8.0\MoexIntegration.Core.csproj.AssemblyReference.cache
+C:\Users\Fedyaev\Documents\MyGitHub\MoexIntegration\MoexIntegration.Core\obj\Debug\net8.0\MoexIntegration.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fedyaev\Documents\MyGitHub\MoexIntegration\MoexIntegration.Core\obj\Debug\net8.0\MoexIntegration.Core.AssemblyInfoInputs.cache
+C:\Users\Fedyaev\Documents\MyGitHub\MoexIntegration\MoexIntegration.Core\obj\Debug\net8.0\MoexIntegration.Core.AssemblyInfo.cs
+C:\Users\Fedyaev\Documents\MyGitHub\MoexIntegration\MoexIntegration.Core\obj\Debug\net8.0\MoexIntegration.Core.csproj.CoreCompileInputs.cache
+C:\Users\Fedyaev\Documents\MyGitHub\MoexIntegration\MoexIntegration.Core\obj\Debug\net8.0\MoexIntegration.Core.dll
+C:\Users\Fedyaev\Documents\MyGitHub\MoexIntegration\MoexIntegration.Core\obj\Debug\net8.0\refint\MoexIntegration.Core.dll
+C:\Users\Fedyaev\Documents\MyGitHub\MoexIntegration\MoexIntegration.Core\obj\Debug\net8.0\MoexIntegration.Core.pdb
+C:\Users\Fedyaev\Documents\MyGitHub\MoexIntegration\MoexIntegration.Core\obj\Debug\net8.0\ref\MoexIntegration.Core.dll
