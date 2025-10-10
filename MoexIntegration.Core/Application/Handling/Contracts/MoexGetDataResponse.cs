@@ -1,9 +1,10 @@
 ﻿
+using MoexIntegration.Core.Domain.Model;
+
 namespace MoexIntegration.Core.Application.Handling.Contracts
 {
     public sealed record MoexGetDataResponse
     {
-        public required double PRICE  { get; set; }
-        public required int ISSUESIZE { get; set; }
+        public required StockInfo Stock { get; set; }
     }
 }

@@ -10,3 +10,4 @@ C:\Users\Fedyaev\Documents\MyGitHub\MoexIntegration\MoexIntegration.Core\obj\Deb
 C:\Users\Fedyaev\Documents\MyGitHub\MoexIntegration\MoexIntegration.Core\obj\Debug\net8.0\refint\MoexIntegration.Core.dll
 C:\Users\Fedyaev\Documents\MyGitHub\MoexIntegration\MoexIntegration.Core\obj\Debug\net8.0\MoexIntegration.Core.pdb
 C:\Users\Fedyaev\Documents\MyGitHub\MoexIntegration\MoexIntegration.Core\obj\Debug\net8.0\ref\MoexIntegration.Core.dll
+C:\Users\Fedyaev\Documents\MyGitHub\MoexIntegration\MoexIntegration.Core\obj\Debug\net8.0\MoexIntegration.Core.sourcelink.json

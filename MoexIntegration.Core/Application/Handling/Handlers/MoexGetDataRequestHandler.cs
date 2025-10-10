@@ -2,6 +2,7 @@
 using MediatR;
 using MoexIntegration.Core.Abstractions;
 using System.Globalization;
+using MoexIntegration.Core.Domain.Model;
 
 namespace MoexIntegration.Core.Application.Handling.Handlers
 {
@@ -10,16 +11,32 @@ namespace MoexIntegration.Core.Application.Handling.Handlers
     {
         public async Task<MoexGetDataResponse> Handle(MoexGetDataRequest request, CancellationToken cancellationToken)
         {
-            var marketdata = await moexApiRequest.GetPrice(request.Ticker);
+            //создание объекта 
+            var stock = StockInfo.Create(request.Ticker);
+            ArgumentNullException.ThrowIfNull(stock);
 
-            var colsPrice = marketdata.GetProperty("columns").EnumerateArray().Select(x => x.GetString()).ToList();
-            var rowPrice = marketdata.GetProperty("data")[0].EnumerateArray().Select(x => x.ToString()).ToList();
-            double price = double.Parse(rowPrice[colsPrice.IndexOf("LAST")], CultureInfo.InvariantCulture);
+            //получение названия
+            var nameRequest = await moexApiRequest.GetName(request.Ticker);
+            stock.AddName(nameRequest);
+
+            //получение цены
+            var priceRequest = await moexApiRequest.GetPrice(request.Ticker);
+            stock.AddLastPrice(priceRequest);
+
+            //получение количества акций
+            var sharesOutstandingRequest = await moexApiRequest.GetSharesOutstanding(request.Ticker);
+            stock.AddSharesOutstanding(sharesOutstandingRequest);
+
+            //получение номера ISIN
+            var isinRequest = await moexApiRequest.GetIsin(request.Ticker);
+            stock.AddIsin(isinRequest);
+
+            //рассчет капитализации
+            stock.DefineMarketCapitalization();
 
             return new MoexGetDataResponse
             {
-                PRICE = price,
-                ISSUESIZE = 5555555
+                Stock = stock
             };
         }
     }

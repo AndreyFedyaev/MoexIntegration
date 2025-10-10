@@ -4,6 +4,9 @@ namespace MoexIntegration.Core.Abstractions
 {
     public interface IMoexApiRequest
     {
-          Task<JsonElement> GetPrice(string ticker);
+        Task<JsonElement> GetName(string ticker);
+        Task<JsonElement> GetPrice(string ticker);
+        Task<JsonElement> GetSharesOutstanding(string ticker);
+        Task<JsonElement> GetIsin(string ticker);
     }
 }
