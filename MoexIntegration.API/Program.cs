@@ -32,14 +32,14 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-//cors для тестирования фронта
-app.UseCors();
-
 // Конфигурация middleware
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
 }
+
+//cors для тестирования фронта
+app.UseCors();
 
 app.UseRouting();
 app.MapControllers();

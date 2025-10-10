@@ -21,7 +21,7 @@ namespace MoexIntegration.Infrastructure.Http
         {
             using var client = new HttpClient();
 
-            string url = $"https://iss.moex.com/iss/engines/stock/markets/shares/boards/TQBR/securities/{ticker}.json?iss.only=marketdata&marketdata.columns=SECID,LAST";
+            string url = $"https://iss.moex.com/iss/engines/stock/markets/shares/boards/TQBR/securities/{ticker}.json?iss.only=marketdata,securities&marketdata.columns=SECID,LAST,LCURRENTPRICE&securities.columns=SECID,PREVPRICE&iss.meta=off";
             var json = await client.GetStringAsync(url);
             var doc = JsonDocument.Parse(json);
             var root = doc.RootElement;

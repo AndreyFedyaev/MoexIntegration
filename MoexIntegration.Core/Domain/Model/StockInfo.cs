@@ -118,6 +118,12 @@ namespace MoexIntegration.Core.Domain.Model
         /// <returns>Статус</returns>
         public bool AddLastPrice(JsonElement data)
         {
+            double LAST = 0;
+            double LCURRENTPRICE = 0;
+            double PREVPRICE = 0;
+
+            //Проверка секции marketdata
+
             // Проверка наличия секции marketdata
             if (!data.TryGetProperty("marketdata", out JsonElement marketdata))
             {
@@ -126,38 +132,101 @@ namespace MoexIntegration.Core.Domain.Model
             }
 
             // Проверка наличия колонок
-            if (!marketdata.TryGetProperty("columns", out JsonElement columnsEl) || columnsEl.ValueKind != JsonValueKind.Array)
+            if (!marketdata.TryGetProperty("columns", out JsonElement marketdataColumnsEl) || marketdataColumnsEl.ValueKind != JsonValueKind.Array)
             {
                 Console.WriteLine("Секция 'columns' отсутствует или неверного типа");
                 return false;
             }
 
             // Проверка наличия данных
-            if (!marketdata.TryGetProperty("data", out JsonElement dataEl) || dataEl.GetArrayLength() == 0)
+            if (!marketdata.TryGetProperty("data", out JsonElement marketdataDataEl) || marketdataDataEl.GetArrayLength() == 0)
             {
                 Console.WriteLine("Нет данных для тикера " + Ticker);
                 return false;
             }
 
-            var columns = columnsEl.EnumerateArray().Select(x => x.GetString()).ToList();
-            var row = dataEl[0].EnumerateArray().Select(x => x.ToString()).ToList();
+            var marketdataColumns = marketdataColumnsEl.EnumerateArray().Select(x => x.GetString()).ToList();
+            var marketdataRow = marketdataDataEl[0].EnumerateArray().Select(x => x.ToString()).ToList();
+
 
             // Проверка наличия колонки LAST
-            if (!columns.Contains("LAST"))
+            if (!marketdataColumns.Contains("LAST"))
             {
                 Console.WriteLine("Колонка 'LAST' отсутствует в ответе");
                 return false;
             }
-
-            // парсинг
-            if (double.TryParse(row[columns.IndexOf("LAST")], NumberStyles.Any, CultureInfo.InvariantCulture, out double price))
+            // Проверка наличия колонки LCURRENTPRICE
+            if (!marketdataColumns.Contains("LCURRENTPRICE"))
             {
-                LastPrice = price;
+                Console.WriteLine("Колонка 'LCURRENTPRICE' отсутствует в ответе");
+                return false;
+            }
+
+            // парсинг LAST
+            if (double.TryParse(marketdataRow[marketdataColumns.IndexOf("LAST")], NumberStyles.Any, CultureInfo.InvariantCulture, out double lastPrice))
+            {
+                LAST = lastPrice;
             }
             else
             {
-                Console.WriteLine("Не удалось распарсить значение LAST в число (тип double)");
+                LAST = 0;
             }
+            // парсинг LCURRENTPRICE
+            if (double.TryParse(marketdataRow[marketdataColumns.IndexOf("LCURRENTPRICE")], NumberStyles.Any, CultureInfo.InvariantCulture, out double lcurrentPrice))
+            {
+                LCURRENTPRICE = lcurrentPrice;
+            }
+            else
+            {
+                LCURRENTPRICE = 0;
+            }
+
+            //Проверка секции securities
+
+            // Проверка наличия секции securities
+            if (!data.TryGetProperty("securities", out JsonElement securities))
+            {
+                Console.WriteLine("Cекция 'securities' отсутствует в ответе MOEX");
+                return false;
+            }
+
+            // Проверка наличия колонок
+            if (!securities.TryGetProperty("columns", out JsonElement securitiesColumnsEl) || securitiesColumnsEl.ValueKind != JsonValueKind.Array)
+            {
+                Console.WriteLine("Секция 'columns' отсутствует или неверного типа");
+                return false;
+            }
+
+            // Проверка наличия данных
+            if (!securities.TryGetProperty("data", out JsonElement securitiesDataEl) || securitiesDataEl.GetArrayLength() == 0)
+            {
+                Console.WriteLine("Нет данных для тикера " + Ticker);
+                return false;
+            }
+
+            var securitiesColumns = securitiesColumnsEl.EnumerateArray().Select(x => x.GetString()).ToList();
+            var securitiesRow = securitiesDataEl[0].EnumerateArray().Select(x => x.ToString()).ToList();
+
+            // Проверка наличия колонки PREVPRICE
+            if (!securitiesColumns.Contains("PREVPRICE"))
+            {
+                Console.WriteLine("Колонка 'PREVPRICE' отсутствует в ответе");
+                return false;
+            }
+
+            // парсинг PREVPRICE
+            if (double.TryParse(securitiesRow[securitiesColumns.IndexOf("PREVPRICE")], NumberStyles.Any, CultureInfo.InvariantCulture, out double prevPrice))
+            {
+                PREVPRICE = prevPrice;
+            }
+            else
+            {
+                PREVPRICE = 0;
+            }
+
+            if (LAST != 0) LastPrice = LAST;
+            else if (LCURRENTPRICE != 0) LastPrice = LCURRENTPRICE;
+            else LastPrice = PREVPRICE;
 
             return true;
         }

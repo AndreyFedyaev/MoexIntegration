@@ -7,7 +7,7 @@ namespace MoexIntegration.API.Http
     [ApiController]
     public class Controller(IMediator mediator) : ControllerBase
     {
-        //https://localhost:7056/getstockdata/SBER
+        
         [HttpGet("getstockdata/{TICKER}")]
         public async Task<MoexGetDataResponse> GetTickerData(string ticker)
         {
