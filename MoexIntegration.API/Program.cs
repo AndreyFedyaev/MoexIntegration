@@ -13,20 +13,20 @@ builder.Services.AddControllers();
 
 builder.Services.AddScoped<IMoexApiRequest, MoexApiRequest>();
 
-//cors для тестирования фронта
 builder.Services.AddCors(options =>
 {
+    
+
     options.AddDefaultPolicy(policy =>
     {
         policy.WithOrigins(
+            "https://fineva.ru",
+            "https://www.fineva.ru",
             "http://127.0.0.1:5500",
-            "http://127.0.0.1:5501",
-            "http://localhost:5500",
-            "http://localhost:5501"
+            "http://localhost:5500"
             )
               .AllowAnyHeader()
               .AllowAnyMethod();
-
     });
 });
 
@@ -38,12 +38,14 @@ if (app.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
 }
 
-//cors для тестирования фронта
-app.UseCors();
+app.UseHttpsRedirection();   // важно, чтобы не было mixed content
 
 app.UseRouting();
+
+app.UseCors();
+
 app.MapControllers();
 
-app.MapGet("/", () => "Hello World!");
+app.MapGet("/", () => "v.0.0.4");
 
 app.Run();
