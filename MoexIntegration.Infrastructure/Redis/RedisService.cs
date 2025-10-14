@@ -1,6 +1,9 @@
 ﻿using Microsoft.Extensions.Configuration;
 using MoexIntegration.Core.Abstractions;
+using MoexIntegration.Core.Domain.Model.Securities;
 using StackExchange.Redis;
+using System.Collections.Generic;
+using System.Text.Json;
 
 namespace MoexIntegration.Infrastructure.Redis
 {
@@ -25,13 +28,10 @@ namespace MoexIntegration.Infrastructure.Redis
             _db = redis.GetDatabase();
         }
 
-        public async Task WriteReadString()
+        public async Task UpdateSecurity(List<Security> data)
         {
-            //// 1. Установка строки
-            //await _db.StringSetAsync("demo:name", "TestData");
-
-            //// 2. Получение строки
-            //var name = await _db.StringGetAsync("demo:name");
+            var serializedArray = JsonSerializer.Serialize(data);
+            await _db.HashSetAsync("SwcuritiesList", "Securities", serializedArray);
         }
     }
 }

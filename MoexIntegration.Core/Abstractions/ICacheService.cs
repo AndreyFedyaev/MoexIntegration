@@ -1,7 +1,9 @@
-﻿namespace MoexIntegration.Core.Abstractions
+﻿using MoexIntegration.Core.Domain.Model.Securities;
+
+namespace MoexIntegration.Core.Abstractions
 {
     public interface ICacheService
     {
-        Task WriteReadString();
+        Task UpdateSecurity(List<Security> data);
     }
 }

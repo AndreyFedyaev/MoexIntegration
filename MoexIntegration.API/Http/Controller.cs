@@ -10,8 +10,7 @@ namespace MoexIntegration.API.Http
         [HttpGet("getstockdata/{TICKER}")]
         public async Task<MoexGetDataResponse> GetTickerData(string ticker)
         {
-
-            await mediator.Send(new MoexGetAllSecuritiesRequest());
+            //await mediator.Send(new MoexGetAllSecuritiesRequest());       //временно для тестов
 
             var result = await mediator.Send(new MoexGetDataRequest { Ticker = ticker});
             return result;

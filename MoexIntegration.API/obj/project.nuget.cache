@@ -23,12 +23,5 @@
     "C:\\Users\\Fedyaev\\.nuget\\packages\\stackexchange.redis\\2.9.25\\stackexchange.redis.2.9.25.nupkg.sha512",
     "C:\\Users\\Fedyaev\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Произошла ошибка при получении данных уязвимости пакета: Не удалось загрузить индекс службы для источника https://gitlab.asc-ural.ru/api/v4/projects/234/packages/nuget/index.json."
-    }
-  ]
+  "logs": []
 }
