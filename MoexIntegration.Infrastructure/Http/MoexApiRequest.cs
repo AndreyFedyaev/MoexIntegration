@@ -52,5 +52,17 @@ namespace MoexIntegration.Infrastructure.Http
 
             return root;
         }
+
+        public async Task<JsonElement> GetAllSecurities()
+        {
+            using var client = new HttpClient();
+
+            string url = "https://iss.moex.com/iss/engines/stock/markets/shares/boards/TQBR/securities.json?iss.only=securities&securities.columns=SECID,SHORTNAME,ISIN";
+            var json = await client.GetStringAsync(url);
+            var doc = JsonDocument.Parse(json);
+            var root = doc.RootElement;
+
+            return root;
+        }
     }
 }

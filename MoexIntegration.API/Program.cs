@@ -1,6 +1,7 @@
 using MoexIntegration.Core.Abstractions;
 using MoexIntegration.Core.Application.Handling.Handlers;
 using MoexIntegration.Infrastructure.Http;
+using MoexIntegration.Infrastructure.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,11 +13,10 @@ builder.Services.AddMediatR(cfg =>
 builder.Services.AddControllers();
 
 builder.Services.AddScoped<IMoexApiRequest, MoexApiRequest>();
+builder.Services.AddSingleton<ICacheService, RedisService>();
 
 builder.Services.AddCors(options =>
 {
-    
-
     options.AddDefaultPolicy(policy =>
     {
         policy.WithOrigins(
@@ -46,6 +46,6 @@ app.UseCors();
 
 app.MapControllers();
 
-app.MapGet("/", () => "v.0.0.4");
+app.MapGet("", () => "v.0.0.5");
 
 app.Run();

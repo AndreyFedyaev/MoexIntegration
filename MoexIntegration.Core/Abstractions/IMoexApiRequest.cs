@@ -8,5 +8,6 @@ namespace MoexIntegration.Core.Abstractions
         Task<JsonElement> GetPrice(string ticker);
         Task<JsonElement> GetSharesOutstanding(string ticker);
         Task<JsonElement> GetIsin(string ticker);
+        Task<JsonElement> GetAllSecurities();
     }
 }

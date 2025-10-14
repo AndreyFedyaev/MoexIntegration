@@ -16,6 +16,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "dotnetRunMessages": true,
+      "launchUrl": "getstockdata/SBER",
       "applicationUrl": "https://localhost:7056;http://localhost:5081"
     },
     "IIS Express": {

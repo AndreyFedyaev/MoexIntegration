@@ -40,3 +40,8 @@ C:\Users\Fedyaev\Documents\MyGitHub\MoexIntegration\MoexIntegration.API\bin\Debu
 C:\Users\Fedyaev\Documents\MyGitHub\MoexIntegration\MoexIntegration.API\bin\Debug\net8.0\MoexIntegration.Infrastructure.dll
 C:\Users\Fedyaev\Documents\MyGitHub\MoexIntegration\MoexIntegration.API\bin\Debug\net8.0\MoexIntegration.Infrastructure.pdb
 C:\Users\Fedyaev\Documents\MyGitHub\MoexIntegration\MoexIntegration.API\obj\Debug\net8.0\MoexIntegration.API.sourcelink.json
+C:\Users\Fedyaev\Documents\MyGitHub\MoexIntegration\MoexIntegration.API\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+C:\Users\Fedyaev\Documents\MyGitHub\MoexIntegration\MoexIntegration.API\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Fedyaev\Documents\MyGitHub\MoexIntegration\MoexIntegration.API\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Fedyaev\Documents\MyGitHub\MoexIntegration\MoexIntegration.API\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+C:\Users\Fedyaev\Documents\MyGitHub\MoexIntegration\MoexIntegration.API\bin\Debug\net8.0\StackExchange.Redis.dll

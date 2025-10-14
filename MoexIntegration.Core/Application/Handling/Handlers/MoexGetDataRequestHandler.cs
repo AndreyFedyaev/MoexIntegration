@@ -1,7 +1,6 @@
 ﻿using MoexIntegration.Core.Application.Handling.Contracts;
 using MediatR;
 using MoexIntegration.Core.Abstractions;
-using System.Globalization;
 using MoexIntegration.Core.Domain.Model;
 
 namespace MoexIntegration.Core.Application.Handling.Handlers

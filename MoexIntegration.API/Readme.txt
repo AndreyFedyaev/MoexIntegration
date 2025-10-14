@@ -17,4 +17,4 @@ docker stop moexintegration
 docker rm moexintegration
 
 7) на виртуальном сервере: запустить новый образ
-docker run -d -p 8080:8080 -p 8081:8081 --name moexintegration fandrey/moexintegration:latest
+docker run -d -p 8080:8080 --name moexintegration --restart unless-stopped fandrey/moexintegration:latest
