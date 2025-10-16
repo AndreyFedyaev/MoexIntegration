@@ -19,7 +19,7 @@ namespace MoexIntegration.Core.Application.Handling.Handlers
             securities.CreateSecurities(securitiesRequest);
 
             //обновление в кеше
-            var casheUpdateResult = cacheService.UpdateSecurity(securities.SecurityList);
+            var casheUpdateResult = cacheService.WriteSecurities(securities.SecurityList);
         }
     }
 }

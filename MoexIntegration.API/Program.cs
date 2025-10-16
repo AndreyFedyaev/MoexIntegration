@@ -1,15 +1,17 @@
+using DeliveryApp.Api.Adapters.BackgroundJobs;
 using MoexIntegration.Core.Abstractions;
-using MoexIntegration.Core.Application.Handling.Handlers;
 using MoexIntegration.Infrastructure.Http;
 using MoexIntegration.Infrastructure.Redis;
+using Quartz;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // MediatR
 builder.Services.AddMediatR(cfg =>
 {
-    cfg.RegisterServicesFromAssembly(typeof(MoexGetDataRequestHandler).Assembly);
+    cfg.RegisterServicesFromAssembly(typeof(MoexIntegration.Core.AssemblyMarker).Assembly);
 });
+
 builder.Services.AddControllers();
 
 builder.Services.AddScoped<IMoexApiRequest, MoexApiRequest>();
@@ -30,6 +32,22 @@ builder.Services.AddCors(options =>
     });
 });
 
+// CRON Jobs
+builder.Services.AddQuartz(configure =>
+{
+    var GetAllMoexDataKey = new JobKey(nameof(GetAllMoexData));
+    configure
+        .AddJob<GetAllMoexData>(GetAllMoexDataKey)
+        .AddTrigger(
+            trigger => trigger.ForJob(GetAllMoexDataKey)
+                .WithSimpleSchedule(
+                    schedule => schedule.WithIntervalInHours(12)
+                        .RepeatForever()));
+       
+    configure.UseMicrosoftDependencyInjectionJobFactory();
+});
+builder.Services.AddQuartzHostedService();
+
 var app = builder.Build();
 
 // Конфигурация middleware
@@ -46,6 +64,6 @@ app.UseCors();
 
 app.MapControllers();
 
-app.MapGet("", () => "v.0.0.5");
+app.MapGet("", () => "v.0.0.6");
 
 app.Run();

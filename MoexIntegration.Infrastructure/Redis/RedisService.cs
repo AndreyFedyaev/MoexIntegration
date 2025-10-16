@@ -2,7 +2,6 @@
 using MoexIntegration.Core.Abstractions;
 using MoexIntegration.Core.Domain.Model.Securities;
 using StackExchange.Redis;
-using System.Collections.Generic;
 using System.Text.Json;
 
 namespace MoexIntegration.Infrastructure.Redis
@@ -28,10 +27,19 @@ namespace MoexIntegration.Infrastructure.Redis
             _db = redis.GetDatabase();
         }
 
-        public async Task UpdateSecurity(List<Security> data)
+        public async Task WriteSecurities(List<Security> data)
         {
             var serializedArray = JsonSerializer.Serialize(data);
             await _db.HashSetAsync("SwcuritiesList", "Securities", serializedArray);
+        }
+
+        public async Task<List<Security>> GetSecurities()
+        {
+            var getResult = await _db.HashGetAsync("SwcuritiesList", "Securities");
+
+            if (!getResult.HasValue) return [];
+
+            return JsonSerializer.Deserialize<List<Security>>(getResult.ToString()) ?? [];
         }
     }
 }

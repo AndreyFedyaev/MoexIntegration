@@ -1,5 +1,4 @@
-﻿
-using MoexIntegration.Core.Domain.Model;
+﻿using MoexIntegration.Core.Domain.Model;
 
 namespace MoexIntegration.Core.Application.Handling.Contracts
 {
