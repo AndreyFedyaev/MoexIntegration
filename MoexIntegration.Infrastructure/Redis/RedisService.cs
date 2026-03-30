@@ -30,12 +30,18 @@ namespace MoexIntegration.Infrastructure.Redis
         public async Task WriteSecurities(List<Security> data)
         {
             var serializedArray = JsonSerializer.Serialize(data);
-            await _db.HashSetAsync("SwcuritiesList", "Securities", serializedArray);
+            await _db.StringSetAsync("SecuritiesList", serializedArray);
+        }
+
+        public async Task WriteSecurityGroups(string key, List<Security> data)
+        {
+            var serializedArray = JsonSerializer.Serialize(data);
+            await _db.StringSetAsync(key, serializedArray);
         }
 
         public async Task<List<Security>> GetSecurities()
         {
-            var getResult = await _db.HashGetAsync("SwcuritiesList", "Securities");
+            var getResult = await _db.StringGetAsync("SecuritiesList");
 
             if (!getResult.HasValue) return [];
 

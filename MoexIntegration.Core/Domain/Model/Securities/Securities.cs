@@ -13,9 +13,14 @@ namespace MoexIntegration.Core.Domain.Model.Securities
         }
 
         /// <summary>
-        /// тикер
+        /// Список всех активов РФ (тикеров)
         /// </summary>
         public List<Security> SecurityList { get; private set; }
+
+        /// <summary>
+        /// Список групп активов
+        /// </summary>
+        public List<SecurityGroup> SecurityGroups { get; private set; }
 
         /// <summary>
         ///     Factory Method
@@ -31,7 +36,7 @@ namespace MoexIntegration.Core.Domain.Model.Securities
         /// <summary>
         ///     Создание списка активов (парсинг данных)
         /// </summary>
-        /// <param name="data">ответ от Moex в JSON</param>
+        /// <param name="root">ответ от Moex в JSON</param>
         /// <returns>Статус</returns>
         public bool CreateSecurities(JsonElement root)
         {
@@ -95,6 +100,63 @@ namespace MoexIntegration.Core.Domain.Model.Securities
             }
 
             return true;
+        }
+
+        /// <summary>
+        ///     Создание групп активов
+        /// </summary>
+        /// <returns>Статус</returns>
+        public bool CreateGroups()
+        {
+            bool result = false;
+            try
+            {
+                int securityCounter = 0;
+                int groupIndex = 0;
+
+                SecurityGroups =
+                [
+                    new SecurityGroup
+                    {
+                        GroupeName = "Group" + (groupIndex + 1),
+                        SecurityList = []
+                    },
+                ];
+
+                Console.WriteLine($"Сгенерирована группа активов: {SecurityGroups[groupIndex].GroupeName}");
+
+                foreach (var security in SecurityList)
+                {
+                    if (securityCounter >= 20)
+                    {
+                        groupIndex++;
+
+                        SecurityGroups.Add(new SecurityGroup
+                        {
+                            GroupeName = "Group" + (groupIndex + 1),
+                            SecurityList = []
+                        });
+
+                        Console.WriteLine($"Сгенерирована группа активов: {SecurityGroups[groupIndex].GroupeName}");
+
+                        securityCounter = 0;
+                    }
+
+                    SecurityGroups[groupIndex].SecurityList.Add(security);
+                    securityCounter++;
+
+                }
+
+                Console.WriteLine($"Сгенерировано всего: {SecurityGroups.Count} групп...");
+
+                result = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception | Ошибка выполнения метода CreateGroups в классе Securities: {ex.Message}");
+            }
+
+            return result;
         }
     }
 }
