@@ -36,6 +36,8 @@ builder.Services.AddCors(options =>
 builder.Services.AddQuartz(configure =>
 {
     var GetAllMoexDataKey = new JobKey(nameof(GetAllMoexData));
+    var GetMoexPricesDataKey = new JobKey(nameof(GetMoexPricesData));
+
     configure
         .AddJob<GetAllMoexData>(GetAllMoexDataKey)
         .AddTrigger(
@@ -43,20 +45,27 @@ builder.Services.AddQuartz(configure =>
                 .WithSimpleSchedule(
                     schedule => schedule.WithIntervalInHours(12)
                         .RepeatForever()));
+
+    configure
+        .AddJob<GetMoexPricesData>(GetMoexPricesDataKey)
+        .AddTrigger(
+            trigger => trigger.ForJob(GetMoexPricesDataKey)
+                .WithSimpleSchedule(
+                    schedule => schedule.WithIntervalInMinutes(10)
+                        .RepeatForever()));
        
-    configure.UseMicrosoftDependencyInjectionJobFactory();
 });
 builder.Services.AddQuartzHostedService();
 
 var app = builder.Build();
 
-// Конфигурация middleware
+// РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ middleware
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
 }
 
-app.UseHttpsRedirection();   // важно, чтобы не было mixed content
+app.UseHttpsRedirection();   // РІР°Р¶РЅРѕ, С‡С‚РѕР±С‹ РЅРµ Р±С‹Р»Рѕ mixed content
 
 app.UseRouting();
 
