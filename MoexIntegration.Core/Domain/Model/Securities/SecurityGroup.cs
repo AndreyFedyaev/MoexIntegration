@@ -10,6 +10,6 @@
         /// <summary>
         /// Список активов РФ (тикеров) входящих в эту группу
         /// </summary>
-        public required List<Security> SecurityList { get; set; }
+        public List<Security> SecurityList { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-using DeliveryApp.Api.Adapters.BackgroundJobs;
+using MoexIntegration.API.BackgroundJobs;
 using MoexIntegration.Core.Abstractions;
 using MoexIntegration.Infrastructure.Http;
 using MoexIntegration.Infrastructure.Redis;
