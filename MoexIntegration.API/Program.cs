@@ -14,7 +14,13 @@ builder.Services.AddMediatR(cfg =>
 
 builder.Services.AddControllers();
 
-builder.Services.AddScoped<IMoexApiRequest, MoexApiRequest>();
+builder.Services.AddHttpClient<IMoexApiRequest, MoexApiRequest>(client =>
+{
+    client.BaseAddress = new Uri("https://iss.moex.com/");
+    client.Timeout = TimeSpan.FromSeconds(30);
+});
+
+builder.Services.AddHttpClient<IMoexApiRequest, MoexApiRequest>();
 builder.Services.AddSingleton<ICacheService, RedisService>();
 
 builder.Services.AddCors(options =>
@@ -37,11 +43,17 @@ builder.Services.AddQuartz(configure =>
 {
     var GetAllMoexDataKey = new JobKey(nameof(GetAllMoexData));
     var GetMoexPricesDataKey = new JobKey(nameof(GetMoexPricesData));
+    var GetMoexPricesWeekDataKey = new JobKey(nameof(GetMoexPricesWeekData));
+    var GetMoexPricesMonthDataKey = new JobKey(nameof(GetMoexPricesMonthData));
+    var GetMoexPricesYearDataKey = new JobKey(nameof(GetMoexPricesYearData));
+
+    var now = DateBuilder.FutureDate(5, IntervalUnit.Second);
 
     configure
         .AddJob<GetAllMoexData>(GetAllMoexDataKey)
         .AddTrigger(
             trigger => trigger.ForJob(GetAllMoexDataKey)
+             .StartAt(now)
                 .WithSimpleSchedule(
                     schedule => schedule.WithIntervalInHours(12)
                         .RepeatForever()));
@@ -50,8 +62,36 @@ builder.Services.AddQuartz(configure =>
         .AddJob<GetMoexPricesData>(GetMoexPricesDataKey)
         .AddTrigger(
             trigger => trigger.ForJob(GetMoexPricesDataKey)
+            .StartAt(now.AddMinutes(1))
                 .WithSimpleSchedule(
                     schedule => schedule.WithIntervalInMinutes(10)
+                        .RepeatForever()));
+
+    configure
+        .AddJob<GetMoexPricesWeekData>(GetMoexPricesWeekDataKey)
+        .AddTrigger(
+            trigger => trigger.ForJob(GetMoexPricesWeekDataKey)
+            .StartAt(now.AddMinutes(3))
+                .WithSimpleSchedule(
+                    schedule => schedule.WithIntervalInHours(1)
+                        .RepeatForever()));
+
+    configure
+        .AddJob<GetMoexPricesMonthData>(GetMoexPricesMonthDataKey)
+        .AddTrigger(
+            trigger => trigger.ForJob(GetMoexPricesMonthDataKey)
+            .StartAt(now.AddMinutes(6))
+                .WithSimpleSchedule(
+                    schedule => schedule.WithIntervalInHours(5)
+                        .RepeatForever()));
+
+    configure
+        .AddJob<GetMoexPricesYearData>(GetMoexPricesYearDataKey)
+        .AddTrigger(
+            trigger => trigger.ForJob(GetMoexPricesYearDataKey)
+            .StartAt(now.AddMinutes(10))
+                .WithSimpleSchedule(
+                    schedule => schedule.WithIntervalInHours(10)
                         .RepeatForever()));
        
 });

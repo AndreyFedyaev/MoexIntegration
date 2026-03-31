@@ -1,22 +1,23 @@
-﻿using MediatR;
+using MediatR;
 using MoexIntegration.Core.Application.Handling.Contracts;
+using MoexIntegration.Core.Domain.Model.Prices;
 using Quartz;
 
 namespace MoexIntegration.API.BackgroundJobs
 {
     [DisallowConcurrentExecution]
-    public class GetAllMoexData : IJob
+    public class GetMoexPricesYearData : IJob
     {
         private readonly IMediator mediator;
 
-        public GetAllMoexData(IMediator mediator)
+        public GetMoexPricesYearData(IMediator mediator)
         {
             this.mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
         }
 
         public async Task Execute(IJobExecutionContext context)
         {
-            await mediator.Send(new MoexGetAllSecuritiesRequest());
+            await mediator.Send(new MoexGetPricesRequest { Period = PricePeriod.Year });
             await Task.CompletedTask;
         }
     }

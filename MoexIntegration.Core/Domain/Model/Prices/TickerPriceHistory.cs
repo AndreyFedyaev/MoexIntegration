@@ -41,21 +41,21 @@ namespace MoexIntegration.Core.Domain.Model.Prices
             // Проверка наличия секции candles
             if (!root.TryGetProperty("candles", out JsonElement candles))
             {
-                Console.WriteLine("Cекция 'candles' отсутствует в ответе MOEX");
+                Console.WriteLine($"Ticker: {Ticker} | Cекция 'candles' отсутствует в ответе MOEX");
                 return false;
             }
 
             // Проверка наличия колонок
             if (!candles.TryGetProperty("columns", out JsonElement columnsEl) || columnsEl.ValueKind != JsonValueKind.Array)
             {
-                Console.WriteLine("Секция 'columns' отсутствует или неверного типа");
+                Console.WriteLine($"Ticker: {Ticker} | Секция 'columns' отсутствует или неверного типа");
                 return false;
             }
 
             // Проверка наличия данных
             if (!candles.TryGetProperty("data", out JsonElement dataEl) || dataEl.GetArrayLength() == 0)
             {
-                Console.WriteLine("Секция 'data' отсутствует или неверного типа");
+                Console.WriteLine($"Ticker: {Ticker} | Секция 'data' отсутствует или неверного типа");
                 return false;
             }
 
@@ -64,13 +64,13 @@ namespace MoexIntegration.Core.Domain.Model.Prices
             // Проверка наличия колонки begin (время открытия свечи)
             if (!columns.Contains("begin"))
             {
-                Console.WriteLine("Колонка 'begin' отсутствует в ответе");
+                Console.WriteLine($"Ticker: {Ticker} | Колонка 'begin' отсутствует в ответе");
                 return false;
             }
             // Проверка наличия колонки close (цена закрытия свечи)
             if (!columns.Contains("close"))
             {
-                Console.WriteLine("Колонка 'close' отсутствует в ответе");
+                Console.WriteLine($"Ticker: {Ticker} | Колонка 'close' отсутствует в ответе");
                 return false;
             }
 

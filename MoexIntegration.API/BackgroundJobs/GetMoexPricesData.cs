@@ -5,6 +5,7 @@ using Quartz;
 
 namespace MoexIntegration.API.BackgroundJobs
 {
+    [DisallowConcurrentExecution]
     public class GetMoexPricesData : IJob
     {
         private readonly IMediator mediator;
