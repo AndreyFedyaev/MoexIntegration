@@ -51,6 +51,7 @@ namespace MoexIntegration.Core.Application.Handling.Handlers
                     {
                         JsonElement tickerPriceHistory;
 
+                        //выгрузка свечей:
                         // 1    — 1 минута
                         // 10   — 10 минут
                         // 60   — 1 час
@@ -62,16 +63,16 @@ namespace MoexIntegration.Core.Application.Handling.Handlers
                         switch (request.Period)
                         {
                             case PricePeriod.Day:
-                                tickerPriceHistory = await moexApiRequest.GetCandleHistoryDay(ticker.Ticker, 10);
+                                tickerPriceHistory = await moexApiRequest.GetCandleHistoryDay(ticker.Ticker, 10);   // 10 минут
                                 break;
                             case PricePeriod.Week:
-                                tickerPriceHistory = await moexApiRequest.GetCandleHistoryWeek(ticker.Ticker, 60);
+                                tickerPriceHistory = await moexApiRequest.GetCandleHistoryWeek(ticker.Ticker, 60);  // 1 час
                                 break;
                             case PricePeriod.Month:
-                                tickerPriceHistory = await moexApiRequest.GetCandleHistoryMonth(ticker.Ticker, 24);
+                                tickerPriceHistory = await moexApiRequest.GetCandleHistoryMonth(ticker.Ticker, 24); // 1 день
                                 break;
                             case PricePeriod.Year:
-                                tickerPriceHistory = await moexApiRequest.GetCandleHistoryYear(ticker.Ticker, 7);
+                                tickerPriceHistory = await moexApiRequest.GetCandleHistoryYear(ticker.Ticker, 7);  // 1 неделя
                                 break;
                             default:
                                 throw new ArgumentOutOfRangeException(nameof(request.Period), request.Period, null);
@@ -93,7 +94,6 @@ namespace MoexIntegration.Core.Application.Handling.Handlers
 
                 //Записываем цены всех активов текущей группы в кеш
                 await cacheService.WriteGroupPrices(groupData.GroupeName, cacheKey, groupPrices);
-                
             }
 
             Console.WriteLine($"--- MoexGetPricesRequestHandler: завершение работы | Период: {request.Period}");

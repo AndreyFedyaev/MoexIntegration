@@ -6,11 +6,11 @@ using Quartz;
 namespace MoexIntegration.API.BackgroundJobs
 {
     [DisallowConcurrentExecution]
-    public class GetMoexPricesData : IJob
+    public class GetMoexPricesDayData : IJob
     {
         private readonly IMediator mediator;
 
-        public GetMoexPricesData(IMediator mediator)
+        public GetMoexPricesDayData(IMediator mediator)
         {
             this.mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
         }

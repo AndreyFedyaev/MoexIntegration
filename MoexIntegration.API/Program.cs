@@ -42,58 +42,62 @@ builder.Services.AddCors(options =>
 builder.Services.AddQuartz(configure =>
 {
     var GetAllMoexDataKey = new JobKey(nameof(GetAllMoexData));
-    var GetMoexPricesDataKey = new JobKey(nameof(GetMoexPricesData));
+    var GetMoexPricesDayDataKey = new JobKey(nameof(GetMoexPricesDayData));
     var GetMoexPricesWeekDataKey = new JobKey(nameof(GetMoexPricesWeekData));
     var GetMoexPricesMonthDataKey = new JobKey(nameof(GetMoexPricesMonthData));
     var GetMoexPricesYearDataKey = new JobKey(nameof(GetMoexPricesYearData));
 
     var now = DateBuilder.FutureDate(5, IntervalUnit.Second);
 
+    //обнвление списка активов
     configure
         .AddJob<GetAllMoexData>(GetAllMoexDataKey)
         .AddTrigger(
             trigger => trigger.ForJob(GetAllMoexDataKey)
-             .StartAt(now)
+             .StartAt(now)  //стартует сразу
                 .WithSimpleSchedule(
-                    schedule => schedule.WithIntervalInHours(12)
+                    schedule => schedule.WithIntervalInHours(12)    //интервал срабатывания - 12 часов
                         .RepeatForever()));
 
+    //обновление цен за день
     configure
-        .AddJob<GetMoexPricesData>(GetMoexPricesDataKey)
+        .AddJob<GetMoexPricesDayData>(GetMoexPricesDayDataKey)
         .AddTrigger(
-            trigger => trigger.ForJob(GetMoexPricesDataKey)
-            .StartAt(now.AddMinutes(1))
+            trigger => trigger.ForJob(GetMoexPricesDayDataKey)
+            .StartAt(now.AddMinutes(1)) //стартует через 1 минуту
                 .WithSimpleSchedule(
-                    schedule => schedule.WithIntervalInMinutes(10)
+                    schedule => schedule.WithIntervalInMinutes(5)  //интервал срабатывания - 5 минут
                         .RepeatForever()));
 
+    //обновление цен за неделю
     configure
         .AddJob<GetMoexPricesWeekData>(GetMoexPricesWeekDataKey)
         .AddTrigger(
             trigger => trigger.ForJob(GetMoexPricesWeekDataKey)
-            .StartAt(now.AddMinutes(3))
+            .StartAt(now.AddMinutes(3)) //стартует через 3 минуты
                 .WithSimpleSchedule(
-                    schedule => schedule.WithIntervalInHours(1)
+                    schedule => schedule.WithIntervalInMinutes(30)  //интервал срабатывания - 30 минут
                         .RepeatForever()));
 
+    //обновление цен за месяц
     configure
         .AddJob<GetMoexPricesMonthData>(GetMoexPricesMonthDataKey)
         .AddTrigger(
             trigger => trigger.ForJob(GetMoexPricesMonthDataKey)
-            .StartAt(now.AddMinutes(6))
+            .StartAt(now.AddMinutes(5)) //стартует через 5 минут
                 .WithSimpleSchedule(
-                    schedule => schedule.WithIntervalInHours(5)
+                    schedule => schedule.WithIntervalInHours(1)     //интервал срабатывания - 1 час
                         .RepeatForever()));
 
+    //обновление цен за год
     configure
         .AddJob<GetMoexPricesYearData>(GetMoexPricesYearDataKey)
         .AddTrigger(
             trigger => trigger.ForJob(GetMoexPricesYearDataKey)
-            .StartAt(now.AddMinutes(10))
+            .StartAt(now.AddMinutes(7)) //стартует через 7 минут
                 .WithSimpleSchedule(
-                    schedule => schedule.WithIntervalInHours(10)
+                    schedule => schedule.WithIntervalInHours(5)    //интервал срабатывания - 5 часов
                         .RepeatForever()));
-       
 });
 builder.Services.AddQuartzHostedService();
 
