@@ -1,4 +1,6 @@
 ﻿namespace MoexIntegration.Core
 {
-    public sealed class AssemblyMarker { }
+    public sealed class AssemblyMarker
+    {
+    }
 }

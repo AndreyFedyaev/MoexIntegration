@@ -36,31 +36,5 @@
         "StatusCode": 200
       }
     ]
-  },
-  {
-    "ContainingType": "MoexIntegration.API.Http.Controller",
-    "Method": "GetTickerData",
-    "RelativePath": "getstockdata/{TICKER}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "ticker",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "MoexIntegration.Core.Application.Handling.Contracts.MoexGetDataResponse",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
   }
 ]

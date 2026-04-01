@@ -28,12 +28,6 @@ namespace MoexIntegration.Infrastructure.Redis
             _db = redis.GetDatabase();
         }
 
-        public async Task WriteSecurities(List<Security> data)
-        {
-            var serializedArray = JsonSerializer.Serialize(data);
-            await _db.StringSetAsync("SecuritiesList", serializedArray);
-        }
-
         //Записываем в группу список тикеров
         public async Task WriteGroupSecurity(string groupName, List<Security> data)
         {
@@ -50,10 +44,6 @@ namespace MoexIntegration.Infrastructure.Redis
             var serializedArray = JsonSerializer.Serialize(data);
             await _db.StringSetAsync($"MoexIntegration:Groups:{groupName}:{key}", serializedArray);
         }
-
-
-        // >>>>>>>> Получение данных из кеша 
-
 
         //Получение списка активов указанной группы
         public async Task<List<Security>> GetGroupSecurities(string groupName)

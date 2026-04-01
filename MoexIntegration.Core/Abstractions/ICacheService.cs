@@ -5,8 +5,6 @@ namespace MoexIntegration.Core.Abstractions
 {
     public interface ICacheService
     {
-        Task WriteSecurities(List<Security> data);
-
         Task WriteGroupSecurity(string groupName, List<Security> data);
         Task WriteGroupPrices(string groupName, string key, TickerPriceHistories data);
 

@@ -20,7 +20,6 @@ builder.Services.AddHttpClient<IMoexApiRequest, MoexApiRequest>(client =>
     client.Timeout = TimeSpan.FromSeconds(30);
 });
 
-builder.Services.AddHttpClient<IMoexApiRequest, MoexApiRequest>();
 builder.Services.AddSingleton<ICacheService, RedisService>();
 
 builder.Services.AddCors(options =>

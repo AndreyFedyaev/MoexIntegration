@@ -12,28 +12,6 @@ namespace MoexIntegration.Infrastructure.Http
             _client = client;
         }
 
-        private static readonly TimeZoneInfo MoscowTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Russian Standard Time");
-
-        public async Task<JsonElement> GetName(string ticker)
-        {
-            string url = $"iss/engines/stock/markets/shares/boards/TQBR/securities/{ticker}.json?iss.only=securities&securities.columns=SECID,SHORTNAME";
-            var json = await _client.GetStringAsync(url);
-            var doc = JsonDocument.Parse(json);
-            var root = doc.RootElement;
-
-            return root;
-        }
-
-        public async Task<JsonElement> GetPrice (string ticker)
-        {
-            string url = $"iss/engines/stock/markets/shares/boards/TQBR/securities/{ticker}.json?iss.only=marketdata,securities&marketdata.columns=SECID,LAST,LCURRENTPRICE&securities.columns=SECID,PREVPRICE&iss.meta=off";
-            var json = await _client.GetStringAsync(url);
-            var doc = JsonDocument.Parse(json);
-            var root = doc.RootElement;
-          
-            return root;
-        }
-
         public Task<JsonElement> GetCandleHistoryDay(string ticker, int interval = 10)
         {
             var till = DateTime.UtcNow;
@@ -72,26 +50,6 @@ namespace MoexIntegration.Infrastructure.Http
             string tillValue = Uri.EscapeDataString(till.ToString("yyyy-MM-dd HH:mm:ss"));
             string url = $"iss/engines/stock/markets/shares/boards/TQBR/securities/{ticker}/candles.json?from={fromValue}&till={tillValue}&interval={interval}&iss.only=candles&iss.meta=off";
 
-            var json = await _client.GetStringAsync(url);
-            var doc = JsonDocument.Parse(json);
-            var root = doc.RootElement;
-
-            return root;
-        }
-
-        public async Task<JsonElement> GetSharesOutstanding(string ticker)
-        {
-            string url = $"iss/engines/stock/markets/shares/boards/TQBR/securities/{ticker}.json?iss.only=securities&securities.columns=SECID,ISSUESIZE";
-            var json = await _client.GetStringAsync(url);
-            var doc = JsonDocument.Parse(json);
-            var root = doc.RootElement;
-
-            return root;
-        }
-
-        public async Task<JsonElement> GetIsin(string ticker)
-        {
-            string url = $"iss/engines/stock/markets/shares/boards/TQBR/securities/{ticker}.json?iss.only=securities&securities.columns=SECID,ISIN";
             var json = await _client.GetStringAsync(url);
             var doc = JsonDocument.Parse(json);
             var root = doc.RootElement;

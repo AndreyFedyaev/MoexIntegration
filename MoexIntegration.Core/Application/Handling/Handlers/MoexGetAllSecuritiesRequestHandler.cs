@@ -25,10 +25,9 @@ namespace MoexIntegration.Core.Application.Handling.Handlers
             //обновление в кеше
             foreach (var group in securities.SecurityGroups)
             {
-                var casheUpdateResult = cacheService.WriteGroupSecurity(group.GroupeName, group.SecurityList);
+                await cacheService.WriteGroupSecurity(group.GroupeName, group.SecurityList);
             }
-           
-           
         }
     }
 }
+

@@ -42,6 +42,8 @@ namespace MoexIntegration.Core.Application.Handling.Handlers
             {
                 var groupPrices = TickerPriceHistories.Create();
 
+                var addNewPriceResult = false;
+
                 //Получение цен для всех активов группы
                 foreach (var ticker in groupData.SecurityList)
                 {
@@ -78,7 +80,7 @@ namespace MoexIntegration.Core.Application.Handling.Handlers
                                 throw new ArgumentOutOfRangeException(nameof(request.Period), request.Period, null);
                         }
 
-                        tickerData.AddPrice(tickerPriceHistory);
+                        addNewPriceResult = tickerData.AddPrice(tickerPriceHistory);
                     }
                     catch (HttpRequestException ex)
                     {
@@ -90,10 +92,15 @@ namespace MoexIntegration.Core.Application.Handling.Handlers
                         Console.WriteLine($"Ticker: {ticker.Ticker} | Таймаут: {ex.Message}");
                         continue;
                     }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Ticker: {ticker.Ticker} | Exception: {ex.Message}");
+                        continue;
+                    }
                 }
 
                 //Записываем цены всех активов текущей группы в кеш
-                await cacheService.WriteGroupPrices(groupData.GroupeName, cacheKey, groupPrices);
+                if(addNewPriceResult) await cacheService.WriteGroupPrices(groupData.GroupeName, cacheKey, groupPrices);
             }
 
             Console.WriteLine($"--- MoexGetPricesRequestHandler: завершение работы | Период: {request.Period}");
