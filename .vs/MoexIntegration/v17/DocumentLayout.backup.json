@@ -3,44 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3AC4D54E-4032-417F-8E28-B1821A9BCEE3}|MoexIntegration.API\\MoexIntegration.API.csproj|c:\\users\\fedyaev\\documents\\mygithub\\moexintegration\\moexintegration.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3AC4D54E-4032-417F-8E28-B1821A9BCEE3}|MoexIntegration.API\\MoexIntegration.API.csproj|solutionrelative:moexintegration.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E3D5F62-C248-4A2A-9B20-9BDB3B7C2CB2}|MoexIntegration.Core\\MoexIntegration.Core.csproj|c:\\users\\fedyaev\\documents\\mygithub\\moexintegration\\moexintegration.core\\abstractions\\imoexapirequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E3D5F62-C248-4A2A-9B20-9BDB3B7C2CB2}|MoexIntegration.Core\\MoexIntegration.Core.csproj|solutionrelative:moexintegration.core\\abstractions\\imoexapirequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{38755BA4-8D19-44AB-94E4-139106905512}|MoexIntegration.Infrastructure\\MoexIntegration.Infrastructure.csproj|c:\\users\\fedyaev\\documents\\mygithub\\moexintegration\\moexintegration.infrastructure\\http\\moexapirequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38755BA4-8D19-44AB-94E4-139106905512}|MoexIntegration.Infrastructure\\MoexIntegration.Infrastructure.csproj|solutionrelative:moexintegration.infrastructure\\http\\moexapirequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E3D5F62-C248-4A2A-9B20-9BDB3B7C2CB2}|MoexIntegration.Core\\MoexIntegration.Core.csproj|c:\\users\\fedyaev\\documents\\mygithub\\moexintegration\\moexintegration.core\\application\\handling\\handlers\\moexgetallsecuritiesrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E3D5F62-C248-4A2A-9B20-9BDB3B7C2CB2}|MoexIntegration.Core\\MoexIntegration.Core.csproj|solutionrelative:moexintegration.core\\application\\handling\\handlers\\moexgetallsecuritiesrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E3D5F62-C248-4A2A-9B20-9BDB3B7C2CB2}|MoexIntegration.Core\\MoexIntegration.Core.csproj|c:\\users\\fedyaev\\documents\\mygithub\\moexintegration\\moexintegration.core\\domain\\model\\securities\\securities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E3D5F62-C248-4A2A-9B20-9BDB3B7C2CB2}|MoexIntegration.Core\\MoexIntegration.Core.csproj|solutionrelative:moexintegration.core\\domain\\model\\securities\\securities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3E3D5F62-C248-4A2A-9B20-9BDB3B7C2CB2}|MoexIntegration.Core\\MoexIntegration.Core.csproj|c:\\users\\fedyaev\\documents\\mygithub\\moexintegration\\moexintegration.core\\application\\handling\\handlers\\getpricesrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E3D5F62-C248-4A2A-9B20-9BDB3B7C2CB2}|MoexIntegration.Core\\MoexIntegration.Core.csproj|solutionrelative:moexintegration.core\\application\\handling\\handlers\\getpricesrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3E3D5F62-C248-4A2A-9B20-9BDB3B7C2CB2}|MoexIntegration.Core\\MoexIntegration.Core.csproj|c:\\users\\fedyaev\\documents\\mygithub\\moexintegration\\moexintegration.core\\application\\handling\\handlers\\moexgetpricesrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3E3D5F62-C248-4A2A-9B20-9BDB3B7C2CB2}|MoexIntegration.Core\\MoexIntegration.Core.csproj|solutionrelative:moexintegration.core\\application\\handling\\handlers\\moexgetpricesrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3AC4D54E-4032-417F-8E28-B1821A9BCEE3}|MoexIntegration.API\\MoexIntegration.API.csproj|c:\\users\\fedyaev\\documents\\mygithub\\moexintegration\\moexintegration.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{3AC4D54E-4032-417F-8E28-B1821A9BCEE3}|MoexIntegration.API\\MoexIntegration.API.csproj|solutionrelative:moexintegration.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{3E3D5F62-C248-4A2A-9B20-9BDB3B7C2CB2}|MoexIntegration.Core\\MoexIntegration.Core.csproj|c:\\users\\fedyaev\\documents\\mygithub\\moexintegration\\moexintegration.core\\domain\\model\\prices\\tickerpricehistories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E3D5F62-C248-4A2A-9B20-9BDB3B7C2CB2}|MoexIntegration.Core\\MoexIntegration.Core.csproj|solutionrelative:moexintegration.core\\domain\\model\\prices\\tickerpricehistories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38755BA4-8D19-44AB-94E4-139106905512}|MoexIntegration.Infrastructure\\MoexIntegration.Infrastructure.csproj|c:\\users\\fedyaev\\documents\\mygithub\\moexintegration\\moexintegration.infrastructure\\redis\\redisservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38755BA4-8D19-44AB-94E4-139106905512}|MoexIntegration.Infrastructure\\MoexIntegration.Infrastructure.csproj|solutionrelative:moexintegration.infrastructure\\redis\\redisservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E3D5F62-C248-4A2A-9B20-9BDB3B7C2CB2}|MoexIntegration.Core\\MoexIntegration.Core.csproj|c:\\users\\fedyaev\\documents\\mygithub\\moexintegration\\moexintegration.core\\abstractions\\icacheservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E3D5F62-C248-4A2A-9B20-9BDB3B7C2CB2}|MoexIntegration.Core\\MoexIntegration.Core.csproj|solutionrelative:moexintegration.core\\abstractions\\icacheservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3AC4D54E-4032-417F-8E28-B1821A9BCEE3}|MoexIntegration.API\\MoexIntegration.API.csproj|c:\\users\\fedyaev\\documents\\mygithub\\moexintegration\\moexintegration.api\\backgroundjobs\\getmoexpricesdaydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3AC4D54E-4032-417F-8E28-B1821A9BCEE3}|MoexIntegration.API\\MoexIntegration.API.csproj|solutionrelative:moexintegration.api\\backgroundjobs\\getmoexpricesdaydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3E3D5F62-C248-4A2A-9B20-9BDB3B7C2CB2}|MoexIntegration.Core\\MoexIntegration.Core.csproj|c:\\users\\fedyaev\\documents\\mygithub\\moexintegration\\moexintegration.core\\application\\handling\\handlers\\moexgetallsecuritiesrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E3D5F62-C248-4A2A-9B20-9BDB3B7C2CB2}|MoexIntegration.Core\\MoexIntegration.Core.csproj|solutionrelative:moexintegration.core\\application\\handling\\handlers\\moexgetallsecuritiesrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,60 +26,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 206,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 5,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MoexApiRequest.cs",
-              "DocumentMoniker": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Infrastructure\\Http\\MoexApiRequest.cs",
-              "RelativeDocumentMoniker": "MoexIntegration.Infrastructure\\Http\\MoexApiRequest.cs",
-              "ToolTip": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Infrastructure\\Http\\MoexApiRequest.cs",
-              "RelativeToolTip": "MoexIntegration.Infrastructure\\Http\\MoexApiRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T02:16:19.569Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IMoexApiRequest.cs",
-              "DocumentMoniker": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Core\\Abstractions\\IMoexApiRequest.cs",
-              "RelativeDocumentMoniker": "MoexIntegration.Core\\Abstractions\\IMoexApiRequest.cs",
-              "ToolTip": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Core\\Abstractions\\IMoexApiRequest.cs",
-              "RelativeToolTip": "MoexIntegration.Core\\Abstractions\\IMoexApiRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T02:16:33.32Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MoexGetAllSecuritiesRequestHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Core\\Application\\Handling\\Handlers\\MoexGetAllSecuritiesRequestHandler.cs",
-              "RelativeDocumentMoniker": "MoexIntegration.Core\\Application\\Handling\\Handlers\\MoexGetAllSecuritiesRequestHandler.cs",
-              "ToolTip": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Core\\Application\\Handling\\Handlers\\MoexGetAllSecuritiesRequestHandler.cs",
-              "RelativeToolTip": "MoexIntegration.Core\\Application\\Handling\\Handlers\\MoexGetAllSecuritiesRequestHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T02:15:30.379Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Securities.cs",
-              "DocumentMoniker": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Core\\Domain\\Model\\Securities\\Securities.cs",
-              "RelativeDocumentMoniker": "MoexIntegration.Core\\Domain\\Model\\Securities\\Securities.cs",
-              "ToolTip": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Core\\Domain\\Model\\Securities\\Securities.cs",
-              "RelativeToolTip": "MoexIntegration.Core\\Domain\\Model\\Securities\\Securities.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T02:14:15.179Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -114,79 +38,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.API\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "MoexIntegration.API\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.API\\Properties\\launchSettings.json",
-              "RelativeToolTip": "MoexIntegration.API\\Properties\\launchSettings.json",
+              "DocumentIndex": 3,
+              "Title": "MoexGetAllSecuritiesRequestHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Core\\Application\\Handling\\Handlers\\MoexGetAllSecuritiesRequestHandler.cs",
+              "RelativeDocumentMoniker": "MoexIntegration.Core\\Application\\Handling\\Handlers\\MoexGetAllSecuritiesRequestHandler.cs",
+              "ToolTip": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Core\\Application\\Handling\\Handlers\\MoexGetAllSecuritiesRequestHandler.cs",
+              "RelativeToolTip": "MoexIntegration.Core\\Application\\Handling\\Handlers\\MoexGetAllSecuritiesRequestHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-01T02:13:52.698Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T02:32:11.775Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ICacheService.cs",
-              "DocumentMoniker": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Core\\Abstractions\\ICacheService.cs",
-              "RelativeDocumentMoniker": "MoexIntegration.Core\\Abstractions\\ICacheService.cs",
-              "ToolTip": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Core\\Abstractions\\ICacheService.cs",
-              "RelativeToolTip": "MoexIntegration.Core\\Abstractions\\ICacheService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "TickerPriceHistories.cs",
+              "DocumentMoniker": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Core\\Domain\\Model\\Prices\\TickerPriceHistories.cs",
+              "RelativeDocumentMoniker": "MoexIntegration.Core\\Domain\\Model\\Prices\\TickerPriceHistories.cs",
+              "ToolTip": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Core\\Domain\\Model\\Prices\\TickerPriceHistories.cs",
+              "RelativeToolTip": "MoexIntegration.Core\\Domain\\Model\\Prices\\TickerPriceHistories.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T02:09:06.933Z",
+              "WhenOpened": "2026-04-08T02:32:08.947Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "RedisService.cs",
-              "DocumentMoniker": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Infrastructure\\Redis\\RedisService.cs",
-              "RelativeDocumentMoniker": "MoexIntegration.Infrastructure\\Redis\\RedisService.cs",
-              "ToolTip": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Infrastructure\\Redis\\RedisService.cs",
-              "RelativeToolTip": "MoexIntegration.Infrastructure\\Redis\\RedisService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T02:08:07.039Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.API\\Program.cs",
-              "RelativeDocumentMoniker": "MoexIntegration.API\\Program.cs",
-              "ToolTip": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.API\\Program.cs",
-              "RelativeToolTip": "MoexIntegration.API\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T01:37:35.136Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "GetMoexPricesDayData.cs",
-              "DocumentMoniker": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.API\\BackgroundJobs\\GetMoexPricesDayData.cs",
-              "RelativeDocumentMoniker": "MoexIntegration.API\\BackgroundJobs\\GetMoexPricesDayData.cs",
-              "ToolTip": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.API\\BackgroundJobs\\GetMoexPricesDayData.cs",
-              "RelativeToolTip": "MoexIntegration.API\\BackgroundJobs\\GetMoexPricesDayData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T01:34:17.85Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "MoexGetPricesRequestHandler.cs",
               "DocumentMoniker": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Core\\Application\\Handling\\Handlers\\MoexGetPricesRequestHandler.cs",
               "RelativeDocumentMoniker": "MoexIntegration.Core\\Application\\Handling\\Handlers\\MoexGetPricesRequestHandler.cs",
               "ToolTip": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Core\\Application\\Handling\\Handlers\\MoexGetPricesRequestHandler.cs",
               "RelativeToolTip": "MoexIntegration.Core\\Application\\Handling\\Handlers\\MoexGetPricesRequestHandler.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACkAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAAgwGMAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T11:01:26.611Z",
+              "WhenOpened": "2026-04-08T02:29:52.163Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GetPricesRequestHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Core\\Application\\Handling\\Handlers\\GetPricesRequestHandler.cs",
+              "RelativeDocumentMoniker": "MoexIntegration.Core\\Application\\Handling\\Handlers\\GetPricesRequestHandler.cs",
+              "ToolTip": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Core\\Application\\Handling\\Handlers\\GetPricesRequestHandler.cs",
+              "RelativeToolTip": "MoexIntegration.Core\\Application\\Handling\\Handlers\\GetPricesRequestHandler.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAwwEUAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T02:28:14.708Z",
               "EditorCaption": ""
             }
           ]

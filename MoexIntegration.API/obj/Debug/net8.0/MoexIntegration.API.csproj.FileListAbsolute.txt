@@ -48,3 +48,8 @@ C:\Users\Fedyaev\Documents\MyGitHub\MoexIntegration\MoexIntegration.API\obj\Debu
 C:\Users\Fedyaev\Documents\MyGitHub\MoexIntegration\MoexIntegration.API\obj\Debug\net8.0\MoexIntegration.API.pdb
 C:\Users\Fedyaev\Documents\MyGitHub\MoexIntegration\MoexIntegration.API\obj\Debug\net8.0\MoexIntegration.API.genruntimeconfig.cache
 C:\Users\Fedyaev\Documents\MyGitHub\MoexIntegration\MoexIntegration.API\obj\Debug\net8.0\ref\MoexIntegration.API.dll
+C:\Users\Fedyaev\Documents\MyGitHub\MoexIntegration\MoexIntegration.API\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\Fedyaev\Documents\MyGitHub\MoexIntegration\MoexIntegration.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Fedyaev\Documents\MyGitHub\MoexIntegration\MoexIntegration.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Fedyaev\Documents\MyGitHub\MoexIntegration\MoexIntegration.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Fedyaev\Documents\MyGitHub\MoexIntegration\MoexIntegration.API\obj\Debug\net8.0\MoexIntegration.API.MvcApplicationPartsAssemblyInfo.cs

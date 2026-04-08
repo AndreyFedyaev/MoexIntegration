@@ -11,20 +11,8 @@ namespace MoexIntegration.Infrastructure.Redis
     {
         private readonly IDatabase _db;
 
-        public RedisService(IConfiguration configuration)
+        public RedisService(IConnectionMultiplexer redis)
         {
-            var config = new ConfigurationOptions
-            {
-                EndPoints = { $"{configuration["Redis:Address"]}:{configuration["Redis:Port"]}" },
-                Password = $"{configuration["Redis:Password"]}",
-                ConnectRetry = 3,
-                ConnectTimeout = 5000,
-                AbortOnConnectFail = false,
-                KeepAlive = 60,
-                DefaultDatabase = 0
-            };
-
-            var redis = ConnectionMultiplexer.Connect(config);
             _db = redis.GetDatabase();
         }
 

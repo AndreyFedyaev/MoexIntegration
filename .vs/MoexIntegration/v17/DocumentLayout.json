@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3E3D5F62-C248-4A2A-9B20-9BDB3B7C2CB2}|MoexIntegration.Core\\MoexIntegration.Core.csproj|c:\\users\\fedyaev\\documents\\mygithub\\moexintegration\\moexintegration.core\\application\\handling\\handlers\\getpricesrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E3D5F62-C248-4A2A-9B20-9BDB3B7C2CB2}|MoexIntegration.Core\\MoexIntegration.Core.csproj|solutionrelative:moexintegration.core\\application\\handling\\handlers\\getpricesrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3E3D5F62-C248-4A2A-9B20-9BDB3B7C2CB2}|MoexIntegration.Core\\MoexIntegration.Core.csproj|c:\\users\\fedyaev\\documents\\mygithub\\moexintegration\\moexintegration.core\\application\\handling\\handlers\\moexgetpricesrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3E3D5F62-C248-4A2A-9B20-9BDB3B7C2CB2}|MoexIntegration.Core\\MoexIntegration.Core.csproj|solutionrelative:moexintegration.core\\application\\handling\\handlers\\moexgetpricesrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E3D5F62-C248-4A2A-9B20-9BDB3B7C2CB2}|MoexIntegration.Core\\MoexIntegration.Core.csproj|c:\\users\\fedyaev\\documents\\mygithub\\moexintegration\\moexintegration.core\\domain\\model\\prices\\pricepoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E3D5F62-C248-4A2A-9B20-9BDB3B7C2CB2}|MoexIntegration.Core\\MoexIntegration.Core.csproj|solutionrelative:moexintegration.core\\domain\\model\\prices\\pricepoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E3D5F62-C248-4A2A-9B20-9BDB3B7C2CB2}|MoexIntegration.Core\\MoexIntegration.Core.csproj|c:\\users\\fedyaev\\documents\\mygithub\\moexintegration\\moexintegration.core\\domain\\model\\prices\\tickerpricehistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E3D5F62-C248-4A2A-9B20-9BDB3B7C2CB2}|MoexIntegration.Core\\MoexIntegration.Core.csproj|solutionrelative:moexintegration.core\\domain\\model\\prices\\tickerpricehistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3E3D5F62-C248-4A2A-9B20-9BDB3B7C2CB2}|MoexIntegration.Core\\MoexIntegration.Core.csproj|c:\\users\\fedyaev\\documents\\mygithub\\moexintegration\\moexintegration.core\\domain\\model\\prices\\tickerpricehistories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E3D5F62-C248-4A2A-9B20-9BDB3B7C2CB2}|MoexIntegration.Core\\MoexIntegration.Core.csproj|solutionrelative:moexintegration.core\\domain\\model\\prices\\tickerpricehistories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3E3D5F62-C248-4A2A-9B20-9BDB3B7C2CB2}|MoexIntegration.Core\\MoexIntegration.Core.csproj|c:\\users\\fedyaev\\documents\\mygithub\\moexintegration\\moexintegration.core\\application\\handling\\handlers\\moexgetallsecuritiesrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,21 +26,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 206,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TickerPriceHistory.cs",
-              "DocumentMoniker": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Core\\Domain\\Model\\Prices\\TickerPriceHistory.cs",
-              "RelativeDocumentMoniker": "MoexIntegration.Core\\Domain\\Model\\Prices\\TickerPriceHistory.cs",
-              "ToolTip": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Core\\Domain\\Model\\Prices\\TickerPriceHistory.cs",
-              "RelativeToolTip": "MoexIntegration.Core\\Domain\\Model\\Prices\\TickerPriceHistory.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAA4wFEAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T02:41:22.036Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -51,41 +38,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PricePoint.cs",
-              "DocumentMoniker": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Core\\Domain\\Model\\Prices\\PricePoint.cs",
-              "RelativeDocumentMoniker": "MoexIntegration.Core\\Domain\\Model\\Prices\\PricePoint.cs",
-              "ToolTip": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Core\\Domain\\Model\\Prices\\PricePoint.cs",
-              "RelativeToolTip": "MoexIntegration.Core\\Domain\\Model\\Prices\\PricePoint.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABBAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "MoexGetAllSecuritiesRequestHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Core\\Application\\Handling\\Handlers\\MoexGetAllSecuritiesRequestHandler.cs",
+              "RelativeDocumentMoniker": "MoexIntegration.Core\\Application\\Handling\\Handlers\\MoexGetAllSecuritiesRequestHandler.cs",
+              "ToolTip": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Core\\Application\\Handling\\Handlers\\MoexGetAllSecuritiesRequestHandler.cs",
+              "RelativeToolTip": "MoexIntegration.Core\\Application\\Handling\\Handlers\\MoexGetAllSecuritiesRequestHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T02:39:46.989Z",
+              "WhenOpened": "2026-04-08T02:32:11.775Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TickerPriceHistories.cs",
+              "DocumentMoniker": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Core\\Domain\\Model\\Prices\\TickerPriceHistories.cs",
+              "RelativeDocumentMoniker": "MoexIntegration.Core\\Domain\\Model\\Prices\\TickerPriceHistories.cs",
+              "ToolTip": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Core\\Domain\\Model\\Prices\\TickerPriceHistories.cs",
+              "RelativeToolTip": "MoexIntegration.Core\\Domain\\Model\\Prices\\TickerPriceHistories.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T02:32:08.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MoexGetPricesRequestHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Core\\Application\\Handling\\Handlers\\MoexGetPricesRequestHandler.cs",
+              "RelativeDocumentMoniker": "MoexIntegration.Core\\Application\\Handling\\Handlers\\MoexGetPricesRequestHandler.cs",
+              "ToolTip": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Core\\Application\\Handling\\Handlers\\MoexGetPricesRequestHandler.cs",
+              "RelativeToolTip": "MoexIntegration.Core\\Application\\Handling\\Handlers\\MoexGetPricesRequestHandler.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAgwGMAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T02:29:52.163Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MoexGetPricesRequestHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Core\\Application\\Handling\\Handlers\\MoexGetPricesRequestHandler.cs",
-              "RelativeDocumentMoniker": "MoexIntegration.Core\\Application\\Handling\\Handlers\\MoexGetPricesRequestHandler.cs",
-              "ToolTip": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Core\\Application\\Handling\\Handlers\\MoexGetPricesRequestHandler.cs*",
-              "RelativeToolTip": "MoexIntegration.Core\\Application\\Handling\\Handlers\\MoexGetPricesRequestHandler.cs*",
-              "ViewState": "AgIAACIAAAAAAAAAAAAgwDsAAAAoAAAAAAAAAA==",
+              "Title": "GetPricesRequestHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Core\\Application\\Handling\\Handlers\\GetPricesRequestHandler.cs",
+              "RelativeDocumentMoniker": "MoexIntegration.Core\\Application\\Handling\\Handlers\\GetPricesRequestHandler.cs",
+              "ToolTip": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Core\\Application\\Handling\\Handlers\\GetPricesRequestHandler.cs",
+              "RelativeToolTip": "MoexIntegration.Core\\Application\\Handling\\Handlers\\GetPricesRequestHandler.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAwwEUAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T02:38:00.143Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MoexGetAllSecuritiesRequestHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Core\\Application\\Handling\\Handlers\\MoexGetAllSecuritiesRequestHandler.cs",
-              "RelativeDocumentMoniker": "MoexIntegration.Core\\Application\\Handling\\Handlers\\MoexGetAllSecuritiesRequestHandler.cs",
-              "ToolTip": "C:\\Users\\Fedyaev\\Documents\\MyGitHub\\MoexIntegration\\MoexIntegration.Core\\Application\\Handling\\Handlers\\MoexGetAllSecuritiesRequestHandler.cs*",
-              "RelativeToolTip": "MoexIntegration.Core\\Application\\Handling\\Handlers\\MoexGetAllSecuritiesRequestHandler.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T02:37:24.795Z",
+              "WhenOpened": "2026-04-08T02:28:14.708Z",
               "EditorCaption": ""
             }
           ]

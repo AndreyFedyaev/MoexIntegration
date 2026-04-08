@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "Program\u002B\u003C\u003Ec",
-    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_4",
+    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_5",
     "RelativePath": "",
     "HttpMethod": "GET",
     "IsController": false,
@@ -18,9 +18,9 @@
     ]
   },
   {
-    "ContainingType": "MoexIntegration.API.Http.Controller",
+    "ContainingType": "MoexIntegration.API.Http.MoexIntegrationController",
     "Method": "GetSecuritiesList",
-    "RelativePath": "getsecurities",
+    "RelativePath": "api/MoexIntegration/getsecurities",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -28,6 +28,32 @@
     "ReturnTypes": [
       {
         "Type": "MoexIntegration.Core.Application.Handling.Contracts.GetSecuritiesResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MoexIntegration.API.Http.MoexIntegrationController",
+    "Method": "GetAllPrices",
+    "RelativePath": "api/MoexIntegration/prices/{period}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "period",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "MoexIntegration.Core.Application.Handling.Contracts.GetPricesResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",

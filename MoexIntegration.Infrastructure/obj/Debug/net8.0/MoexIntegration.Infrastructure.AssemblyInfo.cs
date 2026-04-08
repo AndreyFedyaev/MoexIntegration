@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MoexIntegration.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f4c63e1cd6bb7deeff815087ec56028d7e2afe34")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+10fc3576e80948a40f28b0a98dab59da9b174de6")]
 [assembly: System.Reflection.AssemblyProductAttribute("MoexIntegration.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MoexIntegration.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

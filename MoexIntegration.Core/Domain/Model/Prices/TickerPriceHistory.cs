@@ -90,7 +90,7 @@ namespace MoexIntegration.Core.Domain.Model.Prices
                 if (string.IsNullOrWhiteSpace(beginRaw)) continue;
                 if (string.IsNullOrWhiteSpace(closeRaw)) continue;
 
-                if (!DateTime.TryParse(beginRaw, out var time)) continue;
+                if (!DateTime.TryParseExact(beginRaw, "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.None, out var time)) continue;
                 if (!decimal.TryParse(closeRaw, NumberStyles.Any, CultureInfo.InvariantCulture, out var close)) continue;
 
                 Prices.Add(PricePoint.Create(time, close));
